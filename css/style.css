@@ -1,10 +1,11 @@
 body {
-	background-color: #ed823b ;
+	background-color: #008C15;
 }
 
 h3 {
-	background-color: #e5620b;
-	color: #332e85;
+	background-color: #FFC600
+;
+	color: #008C15;
 	padding: 40px;
 	text-align: center;
 }
@@ -15,13 +16,22 @@ p {
 
 img {
   padding: 40px;
+  max-width: 45%;
+  max-height: 45%;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
 }
 
 div {
   text-align: center;
   font-size: 20px;
-  color: #740202;
-  
+  color: #FFC600;
+  background-color: #008C15;
 }
 
 .mdl-layout__header-row {

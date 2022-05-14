@@ -8,16 +8,16 @@
     <meta name="author" content="Edward Mcnamara" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="./fav_index/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="./fav_index/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="./fav_index/favicon-16x16.png" />
-    <link rel="manifest" href="./fav_index/site.webmanifest" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./fav1_index/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./fav1_index/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./fav1_index/favicon-16x16.png" />
+    <link rel="manifest" href="./fav1_index/site.webmanifest" />
     <!-- Googles MDl Colour Scheme and Font -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
-    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.blue-indigo.min.css" />
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.green-yellow.min.css" />
     <!--Style Sheet -->
     <link rel="stylesheet" href="./css/style.css" />
-    <title> Museum Discount Checker </title>
+    <title> Subway Sandwich Order </title>
   </head>
   <body>
     <!-- For Googles MDL-->
@@ -27,88 +27,96 @@
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
       <header class="mdl-layout__header">
         <div class="mdl-layout__header-row">
-          <span class="mdl-layout-title"> Museum Discount Checker </span>
+          <span class="mdl-layout-title"> Order a Subway Sandwich! </span>
         </div>
       </header>
       <!-- Colored text -->
       <main class="mdl-layout__content">
-        <h3>Please enter your age and the day of the week to check if you're eligible for any discounts at the museum</h3>
+        <!-- Subway logo image -->
+        <img src = "./images/subway-logo.jpeg" class= "center">
+        <h3>Please enter your desired meat, toppings, and extras to determine your subway sandwich order price</h3>
         <br>
-        <!-- Drop down menu for the days of the week -->
+        <!-- Drop down menu for sandwich size -->
         <form action="javascript:displayCost()">
-  <label for="size"> Which sandwich size would you like?</label>
-  <select name="size" id="size">
-    <option value="six-inch"> 6 inch</option>
-    <option value="foot-long"> 12 inch</option>
-  </select>
+          <label for="size"> Which sandwich size would you like?
+          </label>
+          <select name="size" id="size">
+          <option value="six-inch"> 6 inch</option>
+          <option value="foot-long"> 12 inch</option>
+          </select>
         </form>
         <br>
-        <!-- Drop down menu for the days of the week -->
+        <!-- Drop down menu for the drink -->
         <form>
-  <label for="drink"> Would you like a drink?</label>
-  <select name="drink" id="drink">
-    <option value="yes"> YES </option>
-    <option value="no"> NO </option>
-  </select>
+          <label for="drink"> Would you like a drink?
+          </label>
+          <select name="drink" id="drink">
+            <option value="yes"> YES </option>
+            <option value="no"> NO </option>
+          </select>
         </form>
         <br>
-        <!-- Drop down menu for the days of the week -->
-       <form action= javascript:displayCost()>
-  <label for="meat">Please select your type of meat:</label>
-  <select name="meat" id="meat">
-    <option value="steak">Steak</option>
-    <option value="tuna">Tuna</option>
-    <option value="turkey">Turkey</option>
-    <option value="meatball">Meatball</option>
-  </select>
-        </form>
+        <!-- Drop down menu for the meat -->
+      <form action= javascript:displayCost()>
+        <label for="meat">Please select your type of meat:
+        </label>
+        <select name="meat" id="meat">
+          <option value="steak">Steak</option>
+          <option value="tuna">Tuna</option>
+          <option value="turkey">Turkey</option>
+          <option value="meatball">Meatball</option>
+        </select>
+      </form>
           <br> 
           <br>
-          <form action =javascript:displayCost()>
-     <h3> Please Select your cheeses</h3>     
-  <label class="container"> American
-        <input type="checkbox" id="cheese1">
-        <span class="checkmark"></span>
-      </label>
-      <label class="container">Mozzarella
-        <input type="checkbox" id="cheese2">
-        <span class="checkmark"></span>
-      </label>
-      <label class="container">Cheddar 
-        <input type="checkbox" id="cheese3">
-        <span class="checkmark"></span>
-      </label>
-          <h3>Please select your sauces</h3>
-      <label class="container">Chipotle Southwest
-        <input type="checkbox" id="sauce1">
-        <span class="checkmark"></span>
-      </label>
-          <br></br>
-          <label class="container">Mayonnaise
-        <input type="checkbox" id="sauce2">
-        <span class="checkmark"></span>
-      </label>
-      <label class="container">Barbecue
-        <input type="checkbox" id="sauce3">
-        <span class="checkmark"></span>
-      </label>
-      <label class="container">Honey Mustard
-        <input type="checkbox" id="sauce4">
-        <span class="checkmark"></span>
-      </label>
-      <label class="container">Mustard
-        <input type="checkbox" id="sauce5">
-        <span class="checkmark"></span>
-      </label>
-            <br>
-          <form action="javascript:displayCost()">
-            <h3> Would you like Bacon?</h3>
-  <label for="bacon"> Bacon?</label>
-  <select name="bacon" id="bacon">
-    <option value="yes"> YES </option>
-    <option value="no"> NO </option>
-  </select>
-        </form>
+        <!-- Checkboxes for the toppings -->
+      <form action =javascript:displayCost()>
+       <h3> Please Select your cheeses</h3>     
+        <label class="container"> American
+          <input type="checkbox" id="cheese1">
+          <span class="checkmark"></span>
+        </label>
+        <label class="container">Mozzarella
+          <input type="checkbox" id="cheese2">
+          <span class="checkmark"></span>
+        </label>
+        <label class="container">Cheddar 
+          <input type="checkbox" id="cheese3">
+          <span class="checkmark"></span>
+        </label>
+      <h3>Please select your sauces</h3>
+        <label class="container">Chipotle Southwest
+          <input type="checkbox" id="sauce1">
+          <span class="checkmark"></span>
+        </label>
+          <br>
+        <label class="container">Mayonnaise
+          <input type="checkbox" id="sauce2">
+          <span class="checkmark"></span>
+        </label>
+        <label class="container">Barbecue
+          <input type="checkbox" id="sauce3">
+          <span class="checkmark"></span>
+        </label>
+        <label class="container">Honey Mustard
+          <input type="checkbox" id="sauce4">
+          <span class="checkmark"></span>
+        </label>
+        <label class="container">Mustard
+          <input type="checkbox" id="sauce5">
+          <span class="checkmark"></span>
+        </label>
+          <br>
+        <!-- dropdown menu for bacon -->
+      <form action="javascript:displayCost()">
+        <h3> Would you like Bacon?</h3>
+        <label for="bacon"> Bacon?
+        </label>
+          <select name="bacon" id="bacon">
+            <option value="yes"> YES </option>
+            <option value="no"> NO </option>
+          </select>
+      </form>
         <!-- Raised button with ripple -->
         <br>
         <br>
@@ -116,10 +124,14 @@
         class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
           onclick="displayCost()">
           Calculate 
-        </button>
+        </button> 
         </br>
         <p>
-          <div id="displayCost">
+          <div id="subtotal">
+          </div>
+          <div id="tax">
+          </div>
+          <div id="total">
           </div>
         </p>
       </main>
